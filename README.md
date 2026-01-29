@@ -33,16 +33,11 @@ Only cleaned, analysis-ready datasets are included in this repository.
 
 ## How to Run
 ```bash
-git clone https://github.com/yourusername/Analyzing-US-Census-Public-Health.git
+git clone git@github.com:CrassSax7/Analyzing-US-Census-Public-Health.git
 cd Analyzing-US-Census-Public-Health
 pip install -r requirements.txt
 python scripts/analysis.py
 
-git clone git@github.com:CrassSax7/hospital_readmission_forecasting.git
-cd hospital_readmission_forecasting
-pip install -r requirements.txt
-python src/prepare_data.py
-python src/train_readmissions_model.py
 
 
 
