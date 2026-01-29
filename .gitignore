@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# Large / raw data (never commit)
+data/raw/
+*.zip
+*.xpt
+
+# Outputs (optional)
+outputs/
