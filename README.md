@@ -31,20 +31,24 @@ Only cleaned, analysis-ready datasets are included in this repository.
 - **p-value:** 5.09e-69
 - **Conclusion:** Median household income is significantly and negatively correlated with obesity rates.
 
-## How to Run (Mac)
-```bash
+## 🚀 How to Run (Mac)
 
+```bash
 git clone https://github.com/CrassSax7/Analyzing-US-Census-Public-Health.git
 cd Analyzing-US-Census-Public-Health
+
 python3 -m venv venv
 source venv/bin/activate
+
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
+
 python scripts/analysis.py
 
-## How to Run (Windows)
-```bash
+---
 
+## 🚀 How to Run (Windows)
+```bash
 git clone https://github.com/CrassSax7/Analyzing-US-Census-Public-Health.git
 cd Analyzing-US-Census-Public-Health
 
