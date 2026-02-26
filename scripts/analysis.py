@@ -15,9 +15,9 @@ import statsmodels.api as sm
 
 # wrap workflow in function
 def main():
-    # -------------------------------------------------------------------------
+    
     # Project Paths
-    # -------------------------------------------------------------------------
+    
     PROJECT_ROOT = Path(__file__).resolve().parents[1]
     DATA_DIR = PROJECT_ROOT / "data" / "cleaned"
     OUTPUT_DIR = PROJECT_ROOT / "outputs"
@@ -29,9 +29,9 @@ def main():
     LLCP_FILE = DATA_DIR / "LLCP2019_cleaned.csv"
     MERGED_FILE = DATA_DIR / "Final_Merged_County_Data.csv"
 
-    # -------------------------------------------------------------------------
+    
     # Defensive File Validation -> map read friendly names to required paths
-    # -------------------------------------------------------------------------
+    
     required_files = {
         "ACS cleaned data": ACS_FILE,
         "LLCP cleaned BMI data": LLCP_FILE,
@@ -46,10 +46,10 @@ def main():
     # Load Data
     merged = pd.read_csv(MERGED_FILE)
 
-    # -------------------------------------------------------------------------
+    
     # Validate Required Columns -> define analysis required variables
     # convert to numeric, invalid to NaN
-    # -------------------------------------------------------------------------
+    
     required_cols = ["Median_Household_Income", "BMI"]
     for col in required_cols:
         if col not in merged.columns:
@@ -68,9 +68,9 @@ def main():
         print("Insufficient data for statistical analysis.")
         return
 
-    # -------------------------------------------------------------------------
+    
     # Correlation Test -> compute/print pearson correlation coef, p-value
-    # -------------------------------------------------------------------------
+    
     corr, p_value = pearsonr(
         analysis_df["Median_Household_Income"],
         analysis_df["BMI"]
@@ -80,19 +80,19 @@ def main():
     print(f"Pearson correlation: {corr:.4f}")
     print(f"P-value: {p_value:.4g}")
 
-    # -------------------------------------------------------------------------
+    
     # Linear Regression -> add intercept term,define BMI as dependent var
     # fit ordinary least squares regression model, print result
-    # -------------------------------------------------------------------------
+    
     X = sm.add_constant(analysis_df["Median_Household_Income"])
     y = analysis_df["BMI"]
     model = sm.OLS(y, X).fit()
     print("\nRegression Summary:")
     print(model.summary())
 
-    # -------------------------------------------------------------------------
+    
     # Visualization -> create scatterplot (income vs BMI)
-    # -------------------------------------------------------------------------
+    
     plt.figure(figsize=(8, 6))
     sns.regplot(
         data=analysis_df,
