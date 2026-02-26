@@ -46,8 +46,8 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 
 python scripts/analysis.py
+```
 
----
 ---
 
 ## 🚀 How to Run (Windows)
@@ -62,5 +62,4 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 
 python scripts\analysis.py
-
----
+```
