@@ -32,6 +32,29 @@ Only cleaned, analysis-ready datasets are included in this repository.
 - **Conclusion:** Median household income is significantly and negatively correlated with obesity rates.
 
 ---
+```markdown
+## 📁 Repository Structure
+
+```text
+Analyzing-US-Census-Public-Health/
+│
+├── data/
+│   ├── ACS_cleaned.csv
+│   ├── LLCP2019_cleaned.csv
+│   └── Final_Merged_County_Data.csv
+│
+├── outputs/
+│   └── income_vs_bmi.png
+|
+├── notebooks/
+│   └── Data_cleaning-merge-model_USCensusPUBhealth_github.ipynb        
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
+
+---
 
 ## 🚀 How to Run (Mac)
 
